@@ -1,0 +1,31 @@
+
+name: Crear APK de ZAYRO NØVA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v6
+
+      - name: Compilar APK con Flet
+        id: build
+        uses: flet-dev/flet-build-action@v1
+        with:
+          target: apk
+          build-number: ${{ github.run_number }}
+
+      - name: Guardar el resultado
+        uses: actions/upload-artifact@v7
+        with:
+          name: ZayroNova-APK
+          path: ${{ steps.build.outputs.archive-path }}
+          archive: false
+          if-no-files-found: error
