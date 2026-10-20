@@ -1,0 +1,30 @@
+
+# ZAYRO NØVA
+
+Aplicación de ventas e inventario de nuestra marca.
+
+## Objetivo
+
+Facilitar la administración de productos, ventas e inventario de ZAYRO NØVA.
+
+## Funcionalidades
+
+- Inicio
+- Gestión de productos
+- Control de inventario
+- Registro de ventas
+- Administración de proveedores
+
+## Tecnologías
+
+- Python
+- Flet
+- SQLite3 (integración prevista)
+
+## Estado del proyecto
+
+En desarrollo.
+
+---
+
+© 2026 ZAYRO NØVA. Todos los derechos reservados.
